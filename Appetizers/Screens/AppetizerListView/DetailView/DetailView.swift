@@ -87,17 +87,18 @@ struct DetailView: View {
         .frame(width: 300, height: 520)
         .cornerRadius(12)
         .shadow(radius: 40)
-        .overlay(alignment: .topTrailing) {
+        .overlay(Button {
+            print("X button is tapped")
+        } label: {
             Image(systemName: "xmark.circle.fill")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .foregroundColor(.white)
-            
-        }
+               .resizable()
+               .frame(width: 30, height: 30)
+               .foregroundColor(.white)
+               //.background(.black)
+        }, alignment: .topTrailing)
     }
 }
-
-// Preview
+    
 #Preview {
     DetailView(appetizer: MockData.sampleAppetizer)
 }
