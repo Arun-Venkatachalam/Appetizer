@@ -23,6 +23,9 @@
 		AEA3B1592D86E24C00F3D6CB /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3B1582D86E24C00F3D6CB /* AppetizerTabView.swift */; };
 		AEA3B15B2D86E24F00F3D6CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA3B15A2D86E24F00F3D6CB /* Assets.xcassets */; };
 		AEA3B15E2D86E24F00F3D6CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA3B15D2D86E24F00F3D6CB /* Preview Assets.xcassets */; };
+		AEAC7D292D8DE5DF0002AB74 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D282D8DE5DF0002AB74 /* APButton.swift */; };
+		AEAC7D2B2D8DE6D50002AB74 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D2A2D8DE6D50002AB74 /* XDismissButton.swift */; };
+		AEAC7D2D2D8DEA1B0002AB74 /* NutritionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D2C2D8DEA1B0002AB74 /* NutritionInfoView.swift */; };
 		AED7656D2D89886900028DC7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7656C2D89886900028DC7 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,9 @@
 		AEA3B1582D86E24C00F3D6CB /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
 		AEA3B15A2D86E24F00F3D6CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA3B15D2D86E24F00F3D6CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AEAC7D282D8DE5DF0002AB74 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		AEAC7D2A2D8DE6D50002AB74 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		AEAC7D2C2D8DEA1B0002AB74 /* NutritionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInfoView.swift; sourceTree = "<group>"; };
 		AED7656C2D89886900028DC7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +147,7 @@
 		AE8B31962D88B59C00FAB89E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AEAC7D272D8DE5B10002AB74 /* Button */,
 				AE8B31992D88B60500FAB89E /* Image */,
 				AE8B31982D88B5F900FAB89E /* Cell */,
 				AE8B31972D88B5E100FAB89E /* UIKITComponents */,
@@ -210,10 +217,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AEAC7D272D8DE5B10002AB74 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				AEAC7D282D8DE5DF0002AB74 /* APButton.swift */,
+				AEAC7D2A2D8DE6D50002AB74 /* XDismissButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		AED7656B2D89883200028DC7 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
 				AED7656C2D89886900028DC7 /* DetailView.swift */,
+				AEAC7D2C2D8DEA1B0002AB74 /* NutritionInfoView.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -290,10 +307,13 @@
 			files = (
 				AE6E15532D86F5DE000D1E44 /* Appetizer.swift in Sources */,
 				AE6E43002D875C67002E31B6 /* APError.swift in Sources */,
+				AEAC7D2B2D8DE6D50002AB74 /* XDismissButton.swift in Sources */,
 				AE6E15552D870C4A000D1E44 /* AppetizerListCell.swift in Sources */,
 				AE6E154E2D86E8AA000D1E44 /* AccountView.swift in Sources */,
 				AE78E2082D88598B00CB71CF /* Colour+Ext.swift in Sources */,
 				AEA3B1592D86E24C00F3D6CB /* AppetizerTabView.swift in Sources */,
+				AEAC7D2D2D8DEA1B0002AB74 /* NutritionInfoView.swift in Sources */,
+				AEAC7D292D8DE5DF0002AB74 /* APButton.swift in Sources */,
 				AE78E2062D88590700CB71CF /* LoadingView.swift in Sources */,
 				AE78E2022D8843C700CB71CF /* APViewModel.swift in Sources */,
 				AE6E42FE2D875A29002E31B6 /* NetworkManager.swift in Sources */,

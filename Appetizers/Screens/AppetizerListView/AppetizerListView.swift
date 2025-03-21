@@ -16,12 +16,24 @@ struct AppetizerListView: View {
             NavigationStack {
                 List(viewmodel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
+                        .onTapGesture {
+                            viewmodel.selectedAppetizer = appetizer
+                            viewmodel.isShowingDetail = true
+                        }
                 }
                 .listStyle(PlainListStyle())
                 .navigationTitle("🍟 Appetizers")
+                .disabled(viewmodel.isShowingDetail)
             }
             .onAppear() {
                 viewmodel.getAppetizers()
+            }
+            .blur(radius: viewmodel.isShowingDetail ? 20 : 0)
+            
+            if viewmodel.isShowingDetail {
+                if let selectedAppetizer = viewmodel.selectedAppetizer {
+                    DetailView(appetizer: selectedAppetizer, isShowingDetail: $viewmodel.isShowingDetail)
+                }
             }
             
             if viewmodel.isLoading {

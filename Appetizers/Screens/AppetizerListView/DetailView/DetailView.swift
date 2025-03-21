@@ -10,95 +10,63 @@ import SwiftUI
 struct DetailView: View {
     
     var appetizer: Appetizer
+    @Binding var isShowingDetail: Bool
     
     var body: some View {
         VStack {
-            Image("asian-flank-steak")
-                .resizable()
-                .frame(width: 300, height: 220)
-                .scaledToFit()
-            
-            VStack() {
-                Text(appetizer.name)
-                    .fontWeight(.semibold)
-                    .font(.title)
+            ScrollView {
+                AppetizerRemoteImage(urlString: appetizer.imageURL)
+                    .frame(width: 300, height: 220)
+                    .scaledToFit()
                 
-                Text(appetizer.description)
-                    .multilineTextAlignment(.center)
-                    .font(.body)
-                    //.fontWeight(.ultraLight)
-                    //.fixedSize(horizontal: false, vertical: true)
-                    .padding()
-                    //.lineLimit(2)
-                
-                HStack {
-                    VStack(spacing: 10) {
-                        Text("Calories")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.calories)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    .padding()
+                VStack() {
                     
-                    VStack(spacing: 10) {
-                        Text("Carbs")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.carbs)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    .padding()
-                    
-                    VStack(spacing: 10) {
-                        Text("Protein")
-                            .bold()
-                            .font(.caption)
-                        
-                        Text("\(appetizer.protein)")
-                            .foregroundStyle(.secondary)
-                            .fontWeight(.semibold)
-                            .italic()
-                    }
-                    .padding()
-                }
-                
-                Button(action: {
-                    print("Add to Card Tapped")
-                }, label: {
-                    Text("$\(appetizer.price, specifier: "%.2f") - Add To Order")
-                        .font(.title2)
+                    Text(appetizer.name)
+                        .multilineTextAlignment(.center)
                         .fontWeight(.semibold)
-                        .frame(width: 250, height: 50)
-                        .foregroundStyle(.white)
-                        .background(.brandPrimary)
-                        .clipShape(.buttonBorder)
-                })
-                .padding(.bottom)
+                        .font(.title)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
+                    Text(appetizer.description)
+                        .multilineTextAlignment(.center)
+                        .font(.body)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding()
+                    
+                    HStack {
+                        NutritionInfoView(title: "Calories" ,
+                                          value: appetizer.calories)
+                        NutritionInfoView(title: "Carbs" ,
+                                          value: appetizer.carbs)
+                        NutritionInfoView(title: "Protein" ,
+                                          value: appetizer.protein)
+                    }
+                    
+                    Button(action: {
+                        print("Add to Card Tapped")
+                    }, label: {
+                        APButton(title: "$\(appetizer.price, specifier: "%.2f") - Add To Order")
+                    })
+                    .padding(.bottom)
+                }
             }
+            .background(Color(.systemBackground))
+            .frame(width: 300, height: 520)
+            .cornerRadius(12)
+            .shadow(radius: 40)
+            .overlay(Button {
+                print("X button is tapped")
+                isShowingDetail = false
+            } label: {
+                XDismissButton()
+            }, alignment: .topTrailing)
+            .scrollIndicators(ScrollIndicatorVisibility.hidden)
         }
-        .background(Color(.systemBackground))
-        .frame(width: 300, height: 520)
-        .cornerRadius(12)
-        .shadow(radius: 40)
-        .overlay(Button {
-            print("X button is tapped")
-        } label: {
-            Image(systemName: "xmark.circle.fill")
-               .resizable()
-               .frame(width: 30, height: 30)
-               .foregroundColor(.white)
-               //.background(.black)
-        }, alignment: .topTrailing)
     }
 }
-    
+
 #Preview {
-    DetailView(appetizer: MockData.sampleAppetizer)
+    DetailView(appetizer: MockData.sampleAppetizer,
+               isShowingDetail: .constant(true))
 }
