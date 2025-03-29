@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0D0AE42D953ADC00250F3B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D0AE32D953ADC00250F3B /* AccountViewModel.swift */; };
+		AE0D0AE62D9547B000250F3B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D0AE52D9547B000250F3B /* String+Ext.swift */; };
 		AE6E154C2D86E895000D1E44 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E154B2D86E895000D1E44 /* AppetizerListView.swift */; };
 		AE6E154E2D86E8AA000D1E44 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E154D2D86E8AA000D1E44 /* AccountView.swift */; };
 		AE6E15502D86E8B7000D1E44 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E154F2D86E8B7000D1E44 /* OrderView.swift */; };
@@ -26,10 +28,13 @@
 		AEAC7D292D8DE5DF0002AB74 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D282D8DE5DF0002AB74 /* APButton.swift */; };
 		AEAC7D2B2D8DE6D50002AB74 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D2A2D8DE6D50002AB74 /* XDismissButton.swift */; };
 		AEAC7D2D2D8DEA1B0002AB74 /* NutritionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC7D2C2D8DEA1B0002AB74 /* NutritionInfoView.swift */; };
+		AEC81E422D98187800805DFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC81E412D98187800805DFE /* User.swift */; };
 		AED7656D2D89886900028DC7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7656C2D89886900028DC7 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0D0AE32D953ADC00250F3B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		AE0D0AE52D9547B000250F3B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		AE6E154B2D86E895000D1E44 /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
 		AE6E154D2D86E8AA000D1E44 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AE6E154F2D86E8B7000D1E44 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		AEAC7D282D8DE5DF0002AB74 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
 		AEAC7D2A2D8DE6D50002AB74 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		AEAC7D2C2D8DEA1B0002AB74 /* NutritionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionInfoView.swift; sourceTree = "<group>"; };
+		AEC81E412D98187800805DFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AED7656C2D89886900028DC7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AE6E15522D86F5DE000D1E44 /* Appetizer.swift */,
+				AEC81E412D98187800805DFE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 		AE8B31902D88B3B500FAB89E /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
+				AE0D0AE32D953ADC00250F3B /* AccountViewModel.swift */,
 				AE6E154D2D86E8AA000D1E44 /* AccountView.swift */,
 			);
 			path = AccountView;
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				AE78E2072D88598B00CB71CF /* Colour+Ext.swift */,
+				AE0D0AE52D9547B000250F3B /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 				AEAC7D2D2D8DEA1B0002AB74 /* NutritionInfoView.swift in Sources */,
 				AEAC7D292D8DE5DF0002AB74 /* APButton.swift in Sources */,
 				AE78E2062D88590700CB71CF /* LoadingView.swift in Sources */,
+				AE0D0AE42D953ADC00250F3B /* AccountViewModel.swift in Sources */,
 				AE78E2022D8843C700CB71CF /* APViewModel.swift in Sources */,
 				AE6E42FE2D875A29002E31B6 /* NetworkManager.swift in Sources */,
 				AE8B318D2D88AC3200FAB89E /* RemoteImage.swift in Sources */,
@@ -322,7 +332,9 @@
 				AE78E2042D884A0500CB71CF /* Alert.swift in Sources */,
 				AE6E154C2D86E895000D1E44 /* AppetizerListView.swift in Sources */,
 				AED7656D2D89886900028DC7 /* DetailView.swift in Sources */,
+				AE0D0AE62D9547B000250F3B /* String+Ext.swift in Sources */,
 				AE6E15502D86E8B7000D1E44 /* OrderView.swift in Sources */,
+				AEC81E422D98187800805DFE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
