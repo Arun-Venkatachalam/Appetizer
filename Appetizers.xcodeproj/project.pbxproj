@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE06969A2D99734700A247A3 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0696992D99734700A247A3 /* EmptyState.swift */; };
 		AE0D0AE42D953ADC00250F3B /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D0AE32D953ADC00250F3B /* AccountViewModel.swift */; };
 		AE0D0AE62D9547B000250F3B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D0AE52D9547B000250F3B /* String+Ext.swift */; };
 		AE6E154C2D86E895000D1E44 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E154B2D86E895000D1E44 /* AppetizerListView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0696992D99734700A247A3 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		AE0D0AE32D953ADC00250F3B /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		AE0D0AE52D9547B000250F3B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		AE6E154B2D86E895000D1E44 /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE0696982D99732100A247A3 /* Empty States */ = {
+			isa = PBXGroup;
+			children = (
+				AE0696992D99734700A247A3 /* EmptyState.swift */,
+			);
+			path = "Empty States";
+			sourceTree = "<group>";
+		};
 		AE6E15512D86F5BE000D1E44 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +166,7 @@
 		AE8B31962D88B59C00FAB89E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AE0696982D99732100A247A3 /* Empty States */,
 				AEAC7D272D8DE5B10002AB74 /* Button */,
 				AE8B31992D88B60500FAB89E /* Image */,
 				AE8B31982D88B5F900FAB89E /* Cell */,
@@ -335,6 +346,7 @@
 				AE0D0AE62D9547B000250F3B /* String+Ext.swift in Sources */,
 				AE6E15502D86E8B7000D1E44 /* OrderView.swift in Sources */,
 				AEC81E422D98187800805DFE /* User.swift in Sources */,
+				AE06969A2D99734700A247A3 /* EmptyState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
