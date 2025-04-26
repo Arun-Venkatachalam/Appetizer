@@ -43,5 +43,5 @@ struct OrderView: View {
 }
 
 #Preview {
-    OrderView()
+    OrderView().environmentObject(Order())
 }
